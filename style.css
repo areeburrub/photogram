@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Roboto:500);
+
+.google-btn {
+  width: 184px;
+  height: 42px;
+  background-color: #4285f4;
+  border-radius: 2px;
+  box-shadow: 0 3px 4px 0 rgba(141, 141, 141, 0.5);
+  margin: auto 10px;
+}
+.google-btn .google-icon-wrapper {
+  position: absolute;
+  margin-top: 1px;
+  margin-left: 1px;
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  background-color: #fff;
+}
+.google-btn .google-icon {
+  position: absolute;
+  margin-top: 11px;
+  margin-left: 11px;
+  width: 18px;
+  height: 18px;
+}
+.google-btn .btn-text {
+  float: right;
+  margin: 11px 11px 0 0;
+  color: #fff;
+  font-size: 1.8ch;
+  letter-spacing: 0.2px;
+  font-family: "Roboto";
+}
+.google-btn:hover {
+  box-shadow: 0 0 6px #4285f4;
+}
+.google-btn:active {
+  background: #1669F2;
+}
+
+/* code above this is for google button */
+
+body{
+    user-select: none;   
+}
+
+
+nav{
+    position: fixed;
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    background: #72A5F2;
+    color:#1c1c24;
+}
+
+nav #logo{
+    margin:20px;
+    font-size: 3ch;
+    font-family: ubuntu;
+}
+nav ul{
+    display: flex;
+    justify-content:space-between;
+    margin:10px 20px;
+    padding:0;
+}
+nav ul li{
+    list-style-type: none;
+    margin:0px 10px;
+    background:#BAB6DE;
+    padding:10px 20px;
+    border-radius: 20px;
+    font-size: 2.5ch;
+    font-family: ubuntu;
+    
+}
+nav ul li:hover{
+    background:#6151ee;
+    color:#fff;
+}
+
+main{
+    margin-top:100px;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    width:100%;
+}
+
+.profile-card{
+    width:95vw;
+    max-width:500px;
+    height: 200px;
+    background:#6151ee;
+    margin:0 auto;
+    border-radius: 50% 20px 20px 50%;
+    display: flex;
+}
+.profile-card .profile-pic{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background:url('dummy-user.png'),#a095ff;
+
+
+}
+.profile-card div{
+    width: 55%;
+    height:80%;
+    background:#a095ff;
+    margin:auto auto;
+    border-radius: 10px;
+    display:flex;
+    flex-direction: column;
+}
+
+.profile-card div h3{
+    width: 100%;
+    margin:10px 0;
+    text-align:center;
+    font-size: 4ch;
+    font-family:ubuntu;
+}
+.profile-card div button{
+    width: 80%;
+    margin:10px auto;
+    border-radius: 10px;
+    padding:5px 10px;
+    font-family: Arial;
+}
+
+#photo-container{
+    width:90vw;
+    max-width:1500px;
+    height: fit-content;
+    background:#a095ff;
+    margin:0 auto;
+    margin-top:20px;
+    display:grid;
+    grid-template-columns: repeat(1, 1fr);
+    border-radius: 35px;
+}
+
+
+@media only screen and (min-width: 700px) {
+    #photo-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (min-width: 1100px) {
+        #photo-container{
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+}
+
+
+
+#photo-container .photo h4{
+    width: 100%;
+    text-align: center;
+    margin:10px 0;
+    font-size:3ch;
+    font-family: monospace;
+}
+
+#photo-container .photo h6{
+    width: 100%;
+    text-align: left;
+    margin:10px 0;
+    font-size:2.5ch;
+    font-family: monospace;
+}
+
+#photo-container .photo .img{
+    width:90%;
+    height:300px;
+    margin: 0 5%;
+    border-radius: 15px;
+}
+#photo-container .photo{
+    background:#ada5f8;
+    margin:20px;
+    padding:20px;
+    border-radius: 35px;
+    box-shadow: 0 0 20px -8px #000;
+    max-width: 400px;
+}
+
+#createPopup{
+    position: fixed;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    height: 90vh;
+    max-height: 700px;
+    width:95vw;
+    max-width: 700px;
+    background:#1d5fdbf6;
+    border-radius:20px;
+    display:flex;
+    flex-direction: column;
+}
+
+#closePopup{
+    position:absolute;
+    right:10px;
+    margin:0;
+    font-family:monospace;
+    font-size: 5ch;
+}
+#closePopup:hover{
+    color:red;
+}
+
+
+
+#createPopup input::-webkit-file-upload-button {
+    margin:10px; 
+}
+
+#headingPhoto{
+    width:100%;
+    font-size: 3ch;
+    font-family: monospace;
+}
+
+.upload{
+    margin:10px auto;
+    margin-top: 10%;;
+    width:80%;
+    padding:30px 20px;
+    background:#cbe2b8;
+    border-radius:10px;
+    
+}
+
+
+.progressBg{
+    margin: 20px 10px;
+    background:#9eaf90;
+}
+
+
+
+#upProgress{
+    background:#20cf55;
+}
+#upImg{
+    width:90%;
+    height:60%;
+    border-radius:10px;
+    margin:10px auto;
+}
+
+#uploadBtn{
+    width: 60%;
+    margin: 10px auto;
+    padding:10px 20px;
+    border-radius:10px;
+}

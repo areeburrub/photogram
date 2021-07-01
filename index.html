@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photogram</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <h3 id="logo">Photogram</h3>
+        <div id="loginBtn" class="google-btn">
+            <div class="google-icon-wrapper">
+                <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" />
+            </div>
+            <p class="btn-text"><b>Sign in with google</b></p>
+        </div>
+        <div id="userNav" hidden="true">
+            <ul id="logged-in">
+                <li id="allFeed">All Post</li>
+                <li id="profileFeed">Profile</li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <section id="userSection" hidden="true">
+            <div class="profile-card" >
+                <img class="profile-pic" id="userPic">
+                <div>
+                    <h3 id="displayName"></h3>
+                    <button id="createBtn">Create&nbsp;Post</button>
+                    <button id="logoutBtn">Logout</button>
+                </div>
+            </div>
+        </section>
+        <div id="photo-container">
+
+        </div>
+
+        <section id="popup" hidden>
+            <div id="createPopup">
+                <h1 id="closePopup" title="close">X</h1>
+                <div class="upload">
+                    <input type="text" id="headingPhoto" placeholder="Enter a Heading for Photo" maxlength="25">
+                    <input type="file" id="upPhoto" accept="image/png, image/jpeg, image/gif">
+                    <div class="progressBg">
+                        <div id="upProgress" style="height:24px;width:0%"></div>
+                    </div>
+                </div>
+                <div id="upImg" style="background:#a1cbe7"></div>
+                <button id="uploadBtn">UPLOAD</button>
+
+            </div>
+        </section>
+    </main>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+
+
+<!-- Add Your Firebase Script  Here -->
+
+<script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+        apiKey: "",
+        authDomain: ".firebaseapp.com",
+        projectId: "",
+        storageBucket: ".appspot.com",
+        messagingSenderId: "",
+        appId: "",
+        measurementId: ""
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+</script>
+
+
+
+<script src="app.js"></script>
+</body>
+</html>
