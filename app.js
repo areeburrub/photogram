@@ -1,5 +1,5 @@
 // Authentication Part Start here
-const auth = firebase.auth();
+const auth = firebase.default.auth();
 const provider = new firebase.auth.GoogleAuthProvider();
 
 const loginBtn = document.getElementById('loginBtn');
